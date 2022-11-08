@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BMO</string>
+    <string name="nord">Nord</string>
+    <string name="gauche"><![CDATA[<]]></string>
+    <string name="droite"><![CDATA[>]]></string>
+    <string name="photo">Photo</string>
+    <string name="ajouter_porte">Ajouter porte</string>
+    <string name="todo">TODO</string>
+</resources>

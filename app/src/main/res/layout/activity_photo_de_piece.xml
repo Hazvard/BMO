@@ -5,44 +5,52 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".PhotoDePiece">
+        tools:context=".PhotoDePiece" android:background="#E8F4EB">
 
     <TextView
             android:text="@string/nord"
-            android:layout_width="95dp"
-            android:layout_height="26dp" android:id="@+id/orientation"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="158dp"
-            android:layout_marginEnd="158dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="36dp"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            android:layout_width="134dp"
+            android:layout_height="50dp" android:id="@+id/orientation"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textColor="#21848D"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498" android:layout_marginTop="16dp"/>
     <Button
             android:text="@string/gauche"
             android:layout_width="94dp"
             android:layout_height="121dp" android:id="@+id/Gauche"
+            android:textColor="#0D333F"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:backgroundTint="#21848D"/>
     <Button
             android:text="@string/droite"
             android:layout_width="95dp"
             android:layout_height="122dp" android:id="@+id/Droite"
+            android:textColor="#0D333F"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-    />
+            android:backgroundTint="#21848D"/>
     <Button
             android:text="@string/photo"
             android:layout_width="217dp"
             android:layout_height="58dp" android:id="@+id/Photo"
             app:layout_constraintStart_toEndOf="@+id/Gauche"
+            android:textColor="#0D333F"
             app:layout_constraintEnd_toStartOf="@+id/Droite"
             app:layout_constraintBottom_toTopOf="@+id/AjouterPorte"
-            app:layout_constraintTop_toBottomOf="@+id/ImageViewPhoto"/>
+            app:layout_constraintTop_toBottomOf="@+id/ImageViewPhoto" android:backgroundTint="#21848D"/>
     <Button
             android:text="@string/ajouter_porte"
             android:layout_width="212dp"
             android:layout_height="54dp" android:id="@+id/AjouterPorte"
+            android:textColor="#0D333F"
             app:layout_constraintStart_toEndOf="@+id/Gauche"
             app:layout_constraintEnd_toStartOf="@+id/Droite"
             app:layout_constraintTop_toBottomOf="@+id/Photo" app:layout_constraintBottom_toBottomOf="parent"
+            android:backgroundTint="#21848D"
     />
     <ImageView
             android:layout_width="403dp"

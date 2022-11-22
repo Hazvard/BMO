@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".PhotoDePiece" android:background="#E8F4EB" android:id="@+id/informationutton">
+        tools:context=".PhotoDePiece" android:background="#E8F4EB" android:id="@+id/photo">
 
     <TextView
             android:text="@string/nord"
@@ -24,7 +24,8 @@
             android:layout_height="121dp" android:id="@+id/Gauche"
             android:textColor="#0D333F"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:backgroundTint="#21848D"/>
+            app:layout_constraintBottom_toBottomOf="parent" android:backgroundTint="#21848D"
+            tools:ignore="TextContrastCheck"/>
     <Button
             android:text="@string/droite"
             android:layout_width="95dp"
@@ -41,7 +42,8 @@
             android:textColor="#0D333F"
             app:layout_constraintEnd_toStartOf="@+id/Droite"
             app:layout_constraintBottom_toTopOf="@+id/AjouterPorte"
-            app:layout_constraintTop_toBottomOf="@+id/ImageViewPhoto" android:backgroundTint="#21848D"/>
+            app:layout_constraintTop_toBottomOf="@+id/ImageViewPhoto" android:backgroundTint="#21848D"
+            tools:ignore="TextContrastCheck,TextContrastCheck"/>
     <Button
             android:text="@string/ajouter_porte"
             android:layout_width="212dp"
@@ -62,7 +64,16 @@
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_dialog_info"
-            android:id="@+id/imageButton"
+            android:id="@+id/informationButton"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck"/>
+            android:layout_marginStart="84dp"
+            app:layout_constraintStart_toEndOf="@+id/orientation" android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toTopOf="@+id/ImageViewPhoto" android:contentDescription="TODO"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@android:drawable/ic_dialog_info"
+            android:id="@+id/imageButton5"
+            android:contentDescription="@android:string/untitled" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="132dp" android:layout_marginStart="156dp"
+            app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

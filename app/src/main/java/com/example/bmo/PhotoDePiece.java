@@ -2,13 +2,9 @@ package com.example.bmo;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
@@ -17,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import model.Construction;
 import model.Piece;
+import model.outils.Direction;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -46,6 +43,9 @@ public class PhotoDePiece extends AppCompatActivity {
         est = null;
         ouest = null;
 
+        construction = new Construction("active");
+        Piece piece = construction.ajouterPiece();
+
 
 
 
@@ -54,7 +54,7 @@ public class PhotoDePiece extends AppCompatActivity {
         Button droite = findViewById(R.id.Droite);
         Button photo = findViewById(R.id.Photo);
         Button ajouterPorte = findViewById(R.id.AjouterPorte);
-        Button information = findViewById(R.id.informationutton);
+        ImageButton information = findViewById(R.id.informationbutton);
         TextView direction = findViewById(R.id.orientation);
         ImageView imagePiece = findViewById(R.id.ImageViewPhoto);
 
@@ -81,12 +81,16 @@ public class PhotoDePiece extends AppCompatActivity {
 
                             if(orientation == 0){
                                 nord = bitmap;
+                                construction.ajouterMur(piece, nord, Direction.NORD);
                             }else if(orientation == 1){
                                 est = bitmap;
+                                construction.ajouterMur(piece, est, Direction.EST);
                             } else if (orientation == 2) {
                                 sud = bitmap;
+                                construction.ajouterMur(piece, sud, Direction.SUD);
                             } else if (orientation == 3) {
                                 ouest = bitmap;
+                                construction.ajouterMur(piece, ouest, Direction.OUEST);
                             }
 
 

@@ -17,10 +17,10 @@ public class Piece {
 
     public Piece(String id){
 
-        murEst = new Mur();
-        murSud = new Mur();
-        murNord  = new Mur();
-        murOuest  = new Mur();
+        murEst = null;
+        murSud = null;
+        murNord  = null;
+        murOuest  = null;
 
         this.id = id;
 
@@ -54,6 +54,10 @@ public class Piece {
             return murNord;
 
         return null;
+    }
+
+    public Boolean complete(){
+        return murNord != null && murEst != null && murSud != null && murOuest != null ;
     }
 
     public String getId() {

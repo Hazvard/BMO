@@ -6,4 +6,7 @@
     <string name="photo">Photo</string>
     <string name="ajouter_porte">Ajouter porte</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

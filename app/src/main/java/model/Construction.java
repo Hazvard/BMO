@@ -14,8 +14,17 @@ public class Construction {
         Date maintenant = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("YYYYMMddHHmmss");
         id = "Construction"+ formatter.format(maintenant);
+    }
 
+    public Construction constructionActive(){
+        return new Construction();
+    }
 
+    public void enregistreActive(Construction construction){
+
+    }
+
+    public void enregistrer(Construction construction){
 
     }
 
@@ -33,5 +42,10 @@ public class Construction {
     public Piece getPiece(String id){
         return ensembleDesPieces.get(id);
     }
+
+
+
+
+
 
 }

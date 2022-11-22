@@ -30,6 +30,15 @@
             android:theme="@style/Theme.BMO"
             tools:targetApi="31">
         <activity
+                android:name=".InformationActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".FullscreenActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:exported="false"
+                android:label="@string/title_activity_fullscreen"
+                android:theme="@style/Theme.BMO.Fullscreen"/>
+        <activity
                 android:name=".PhotoDePiece"
                 android:exported="false"/>
         <activity

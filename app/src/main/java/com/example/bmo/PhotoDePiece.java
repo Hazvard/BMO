@@ -15,6 +15,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import model.Construction;
 import model.Piece;
 
 import java.io.FileNotFoundException;
@@ -30,6 +31,8 @@ public class PhotoDePiece extends AppCompatActivity {
     private Bitmap est;
     private Bitmap ouest;
 
+    private Construction construction;
+
 
 
     @Override
@@ -38,7 +41,6 @@ public class PhotoDePiece extends AppCompatActivity {
         setContentView(R.layout.activity_photo_de_piece);
 
         orientation = 0;
-        Piece piece  = new Piece();
         nord = null;
         sud = null;
         est = null;
@@ -52,6 +54,7 @@ public class PhotoDePiece extends AppCompatActivity {
         Button droite = findViewById(R.id.Droite);
         Button photo = findViewById(R.id.Photo);
         Button ajouterPorte = findViewById(R.id.AjouterPorte);
+        Button information = findViewById(R.id.informationutton);
         TextView direction = findViewById(R.id.orientation);
         ImageView imagePiece = findViewById(R.id.ImageViewPhoto);
 

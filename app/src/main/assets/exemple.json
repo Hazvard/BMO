@@ -1,0 +1,14 @@
+{
+  "nom": "Batiment 1",
+  "nbpieces": 1,
+  "pieces": [
+    {
+      "active":true,
+      "nom": "salon",
+      "murSud": "exemple1.png",
+      "murNord":"exemple2.png" ,
+      "murEst": "exemple3.png" ,
+      "murOuest": "exemple4.png"
+    }
+  ]
+}

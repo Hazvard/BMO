@@ -15,12 +15,15 @@ public class Piece {
     private Mur murNord;
     private String id;
 
+    private Boolean active;
+
     public Piece(String id){
 
         murEst = null;
         murSud = null;
         murNord  = null;
         murOuest  = null;
+        active = false;
 
         this.id = id;
 
@@ -32,7 +35,16 @@ public class Piece {
         String idPiece = "Piece"+ formatter.format(maintenant);
     }
 
-    public void ajouterMur(Bitmap photo, Direction direction){
+    public Piece(Boolean active, String id, String murOuest, String murEst, String murNord, String murSud){
+        this.id = id;
+        this.murEst = new Mur(murEst);
+        this.murSud = new Mur(murSud);
+        this.murNord = new Mur(murNord);
+        this.murOuest = new Mur(murOuest);
+        this.active = active;
+    }
+
+    public void ajouterMur(String photo, Direction direction){
         if(direction == Direction.EST)
             murEst = new Mur(photo);
         if(direction == Direction.OUEST)
@@ -62,5 +74,39 @@ public class Piece {
 
     public String getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "      \"active\":" + active + "\",\n" +
+                "      \"nom\": \"" + id + "\",\n" +
+                "      \"murSud\": \""+ murSud +"\",\n" +
+                "      \"murNord\":\"" + murNord + "\" ,\n" +
+                "      \"murEst\": \"" + murEst + "\" ,\n" +
+                "      \"murOuest\": \"" + murOuest  +"\"";
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public Mur getMurSud() {
+        return murSud;
+    }
+
+    public Mur getMurEst() {
+        return murEst;
+    }
+
+    public Mur getMurOuest() {
+        return murOuest;
+    }
+
+    public Mur getMurNord() {
+        return murNord;
     }
 }

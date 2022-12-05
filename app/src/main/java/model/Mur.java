@@ -8,18 +8,18 @@ import java.util.HashMap;
 public class Mur {
 
     private HashMap<String,Porte> ensembleDesPortes;
-    private Bitmap vueDuMur;
+    private String murURL;
 
 
-    public Mur(Bitmap photo) {
+    public Mur(String photo) {
 
-        this.vueDuMur = photo;
+        this.murURL = photo;
         ensembleDesPortes = new HashMap<>();
     }
 
     public Mur(){
         ensembleDesPortes = null;
-        vueDuMur = null;
+        murURL = null;
     }
 
     public void ajouterPorte(Piece PieceSuivante){

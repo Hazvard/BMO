@@ -18,7 +18,6 @@ public class Menu extends AppCompatActivity {
 
 
 
-
         Button creation = findViewById(R.id.creationconstruction);
         Button repprendre = findViewById(R.id.ouvrirderniereconstruction);
 

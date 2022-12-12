@@ -59,7 +59,6 @@ public class PhotoDePiece extends AppCompatActivity {
         Button droite = findViewById(R.id.Droite);
         Button photo = findViewById(R.id.Photo);
         Button ajouterPorte = findViewById(R.id.AjouterPorte);
-        ImageButton information = findViewById(R.id.imageButton5);
         TextView direction = findViewById(R.id.orientation);
         ImageView imagePiece = findViewById(R.id.ImageViewPhoto);
 
